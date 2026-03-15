@@ -61,7 +61,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     margin: 0 auto;
     gap: 200px;
 }
@@ -177,9 +177,9 @@ h2 {
 
 .about {
     display: flex;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     justify-content: space-around;
-    /* align-items: center; */
+    align-items: center;
     /* margin: 0 auto; */
     gap: 80px;
     /* padding-top: 100px; */
