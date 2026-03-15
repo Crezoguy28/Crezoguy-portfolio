@@ -8,9 +8,14 @@ body {
 
 }
 
-header {
-    padding-top: 30px;
+.container {
+    padding: 0 100px;
 }
+
+header {
+    padding-top: 0px;
+}
+
 
 /* nav bar css */
 nav {
@@ -35,7 +40,8 @@ nav li {
 }
 
 button {
-    background-color: #FF6A3A;
+    /* background-color: #FF6A3A; */
+    background: linear-gradient(96.14deg, #FF6A3A 6.95%, #994023 97.18%);
     color: #ffffff;
     font-family: instrument sans;
     font-size: 20px;
@@ -47,8 +53,7 @@ button {
     padding-right: 30px;
     padding-bottom: 10px;
     padding-left: 30px;
-    gap: 10px;
-}
+    gap: 10px;}
 
 /* hero saction css */
 
@@ -104,14 +109,6 @@ h1 {
     -webkit-background-clip: text;
 }
 
-h5 {
-    font-family: instrument sans;
-    font-size: 48px;
-    color: #808080;
-    align-items: flex-start;
-    margin: 0px 0px;
-
-}
 
 .radial-blur {
     position: absolute;
@@ -133,7 +130,7 @@ h5 {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-     position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -147,7 +144,6 @@ h2 {
     font-size: 150px;
     margin: 0;
     font-weight: 800;
-    color: #FF6A3A;
 }
 
 .stroke {
@@ -155,16 +151,22 @@ h2 {
     color: transparent;
     -webkit-text-stroke: 2px #FF6A3A;
     opacity: 0.2;
-    z-index: 2;
+    z-index: 5;
 }
 
 .fill {
     z-index: 0;
+    color: #FF6A3A;
 }
 
-.top img {
-    z-index: 1;
-    position:absolute;
+.top .jojo-img {
+    z-index: 0;
+    position: absolute;
+}
+
+.top .logo-img {
+    opacity: 0.3;
+    z-index: 0;
 }
 
 .name {
@@ -177,10 +179,19 @@ h2 {
     display: flex;
     max-width: 1600px;
     justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
+    /* align-items: center; */
+    /* margin: 0 auto; */
     gap: 80px;
+    /* padding-top: 100px; */
+}
+
+.about-text {
+    display: flex;
     padding-top: 100px;
+    align-items: center;
+    /* margin: 0 auto; */
+    font-size: 90px;
+    font-weight: 800;
 }
 
 .content {
@@ -201,7 +212,8 @@ h5 {
     font-size: 48px;
     color: #808080;
     margin: 0px 0px;
-    font-weight: 400
+    font-weight: 700;
+    align-items: flex-start;
 }
 
 .highlight-name {
