@@ -184,6 +184,44 @@ h2 {
     gap: 80px;
     /* padding-top: 100px; */
 }
+.case-study-1,.case-study-2,.case-study-3,.case-study-4 {
+    display: flex;
+    /* max-width: 1600px; */
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 0 auto; */
+    gap: 60px;
+    opacity: 1;
+    border-radius: 40px;
+    border-width: 1px;
+    padding: 40px;
+    border: 1px solid #393939;
+    top: 10%;
+	position: sticky;
+	z-index: 0;
+    background: #1B1B1B;
+    margin-bottom: 60px;
+
+}
+.case-heading{
+    background: linear-gradient(180.41deg, #FFFFFF -40.42%, rgba(32, 34, 39, 0) 128.9%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: sticky;
+    font-family: Basement Grotesque;
+    font-weight: 800;
+    font-style: Black;
+    font-size: 124px;
+    leading-trim: CAP_HEIGHT;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+.case-btn{
+    width: 274px;
+}
 
 .about-text {
     display: flex;
