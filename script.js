@@ -8,17 +8,63 @@ let currentImgX = 0, currentImgY = 0;
 let currentTextX = 0, currentTextY = 0;
 let currentNameX = 0, currentNameY = 0;
 
+// heroSection.addEventListener('mousemove', (e) => {
+//     const centerX = window.innerWidth / 2;
+//     const centerY = window.innerHeight / 2;
+    
+//     mouseX = (e.clientX - centerX);
+//     mouseY = (e.clientY - centerY);
+// });
+
+// heroSection.addEventListener('mouseleave', () => {
+//     mouseX = 0;
+//     mouseY = 0;
+// });
+
+// const moveImg = document.querySelector('.move-img');
+// const heroSection = document.querySelector('.hero-section');
+// const moveText = document.querySelector('#text');
+// const moveName = document.querySelector('.name');
+
+// let mouseX = 0, mouseY = 0;
+
 heroSection.addEventListener('mousemove', (e) => {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
-    
+
     mouseX = (e.clientX - centerX);
     mouseY = (e.clientY - centerY);
+
+    // GSAP smooth animation
+    gsap.to(moveImg, {
+        x: mouseX * 0.05,
+        y: mouseY * 0.05,
+        duration: 0.6,
+        ease: "power3.out"
+    });
+
+    gsap.to(moveName, {
+        x: mouseX * 0.06,
+        y: mouseY * 0.06,
+        duration: 0.6,
+        ease: "power3.out"
+    });
+
+    gsap.to(moveText, {
+        x: mouseX * -0.03,
+        y: mouseY * -0.03,
+        duration: 0.6,
+        ease: "power3.out"
+    });
 });
 
 heroSection.addEventListener('mouseleave', () => {
-    mouseX = 0;
-    mouseY = 0;
+    gsap.to([moveImg, moveText, moveName], {
+        x: 0,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out"
+    });
 });
 
 function animate() {
@@ -44,11 +90,10 @@ function animate() {
 animate();
 
 // tiperX animation 
-const FRAMES = [];
+const FRAMES = ["images/device/deviceframes1.png","images/device/deviceframes (2).png","images/device/deviceframes (3).png","images/device/deviceframes (4).png","images/device/deviceframes (5).png","images/device/deviceframes (6).png","images/device/deviceframes (7).png","images/device/deviceframes (8).png","images/device/deviceframes (9).png","images/device/deviceframes (10).png","images/device/deviceframes (11).png","images/device/deviceframes (12).png","images/device/deviceframes (13).png","images/device/deviceframes (14).png","images/device/deviceframes (15).png","images/device/deviceframes (16).png","images/device/deviceframes17.png"];
 const TOTAL = FRAMES.length;
 const canvas = document.getElementById('frameCanvas');
 const dotsEl = document.getElementById('frameDots');
-const counterEl = document.getElementById('frameCounter');
 const progressFill = document.getElementById('progressFill');
 const cinematic = document.getElementById('cinematic');
 const ambientBg = document.getElementById('ambientBg');
@@ -108,10 +153,9 @@ function setFrame(idx) {
   
   imgs[currentFrame].classList.add('active');
   dots[currentFrame].classList.add('on');
-  ambientBg.style.background = ambients[currentFrame];
+//   ambientBg.style.background = ambients[currentFrame];
   
   const num = String(currentFrame + 1).padStart(2, '0');
-  counterEl.innerHTML = `<b>${num}</b> / ${TOTAL}`;
 }
 
 function jumpToFrame(idx) {
@@ -131,7 +175,6 @@ function onScroll() {
   // In cinematic zone?
   const inZone = scrolled > -window.innerHeight * 0.5 && scrolled < totalScroll + window.innerHeight * 0.5;
   dotsEl.classList.toggle('visible', inZone);
-  counterEl.classList.toggle('visible', inZone);
   document.body.classList.toggle('cinematic-mode', inZone && rawProgress > 0 && rawProgress < 1);
   
   // Frame index

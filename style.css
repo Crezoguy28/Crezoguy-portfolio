@@ -273,7 +273,7 @@ p {
   position: relative;
   /* tall enough for 17 frames with breathing room */
   height: 550vh;
-  background: #000;
+  /* background: #000; */
 }
 
 .cinematic-sticky {
@@ -290,7 +290,7 @@ p {
 .ambient-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 120% 100% at 50% 50%, #0d0818 0%, #000 100%);
+  /* background: radial-gradient(ellipse 120% 100% at 50% 50%, #0d0818 0%, #000 100%); */
   transition: background 0.5s;
 }
 
@@ -299,7 +299,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); */
   pointer-events: none;
   opacity: 0.5;
 }
@@ -311,7 +311,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 
@@ -333,36 +333,6 @@ p {
   opacity: 1;
 }
 
-/* Progress dots */
-.frame-dots {
-  position: fixed;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.frame-dots.visible { opacity: 1; }
-
-.fdot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.fdot.on {
-  background: var(--purple-soft);
-  transform: scale(1.8);
-  box-shadow: 0 0 8px rgba(124,110,245,0.6);
-}
 
 /* Frame counter */
 .frame-counter {
@@ -386,23 +356,6 @@ p {
   font-weight: 700;
 }
 
-/* Progress bar */
-.progress-track {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: rgba(255,255,255,0.06);
-  z-index: 200;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(to right, var(--purple), var(--purple-soft));
-  width: 0%;
-  transition: width 0.05s linear;
-}
 
 body.cinematic-mode .letterbox-top,
 body.cinematic-mode .letterbox-bottom {
