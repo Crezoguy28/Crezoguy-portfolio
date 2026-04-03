@@ -732,8 +732,7 @@ body.cinematic-mode .letterbox-bottom {
         padding: 0 16px;
     }
    ,hire-btn{
-              visibility: hidden;
-
+      display: none;
    }
 
     h1 {
