@@ -1,6 +1,14 @@
 /* ═══════════════════════════════
    BASE & RESET
 ═══════════════════════════════ */
+@font-face {
+  font-family: 'Basement';
+  src: url('./fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -8,6 +16,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Basement', sans-serif;
 }
 
 body {
@@ -78,7 +87,7 @@ nav li:hover {
 .hire-btn {
     background: linear-gradient(96.14deg, #FF6A3A 6.95%, #994023 97.18%);
     color: #ffffff;
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     font-size: 20px;
     font-weight: 400;
     border-radius: 30px;
@@ -165,7 +174,7 @@ nav li:hover {
 }
 
 h1 {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     font-size: 164px;
     font-weight: 700;
     margin: 0;
@@ -180,7 +189,7 @@ h1 {
 }
 
 .hero-hello {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     font-size: 48px;
     color: #808080;
     margin: 0;
@@ -261,7 +270,7 @@ h2 {
     align-items: center;
     font-size: 90px;
     font-weight: 800;
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     color: #ffffff;
     margin: 0;
     line-height: 1.1;
@@ -296,7 +305,8 @@ h2 {
     background-clip: text;
     position: sticky;
     top: 0;
-    font-family: 'Instrument Sans', sans-serif;
+    /* font-family: 'Basement', sans-serif; */
+    font-family: 'Basement', sans-serif;
     font-weight: 800;
     font-size: 124px;
     line-height: 100%;
@@ -317,11 +327,12 @@ h2 {
     padding: 40px;
     border: 1px solid #393939;
     background: #1B1B1B;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     position: sticky;
-    top: 10%;
+    top: 20%;
     z-index: 0;
 }
+
 
 .case-img {
     flex-shrink: 0;
@@ -331,7 +342,7 @@ h2 {
     width: 274px;
     background: linear-gradient(96.14deg, #FF6A3A 6.95%, #994023 97.18%);
     color: #ffffff;
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     font-size: 18px;
     font-weight: 400;
     border-radius: 30px;
@@ -348,14 +359,14 @@ h2 {
 }
 
 h3 {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     font-size: 64px;
     margin: 0;
     color: #ffffff;
 }
 
 h5 {
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Basement', sans-serif;
     font-size: 48px;
     color: #808080;
     margin: 0;
