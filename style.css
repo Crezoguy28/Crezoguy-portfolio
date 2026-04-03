@@ -731,6 +731,10 @@ body.cinematic-mode .letterbox-bottom {
     .container {
         padding: 0 16px;
     }
+   ,hire-btn{
+              visibility: hidden;
+
+   }
 
     h1 {
         font-size: clamp(36px, 13vw, 60px);
