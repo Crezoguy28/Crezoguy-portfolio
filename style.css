@@ -342,6 +342,9 @@ h2 {
     transition: transform 0.1s linear;
 
 }
+.case-study-4{
+    z-index: 5;
+}
 
 .case-study {
     transform-origin: center top;
