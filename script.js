@@ -186,6 +186,35 @@ function onScroll() {
   const globalP = window.scrollY / globalMax;
   progressFill.style.width = (globalP * 100) + '%';
 }
+const cards = document.querySelectorAll(".case-study");
+const section = document.querySelector(".case-study-section");
 
+window.addEventListener("scroll", () => {
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  // overall scroll progress of section
+  const progress = (scrollY - sectionTop + windowHeight) / sectionHeight;
+
+  cards.forEach((card, index) => {
+    // each card has delayed animation
+    const delay = index * 0.15;
+
+    let scale = 1 - (progress - delay) * 0.2;
+
+    // clamp
+    scale = Math.max(0.75, Math.min(1, scale));
+
+    card.style.transform = `scale(${scale})`;
+    const yOffset = (progress - delay) * 50;
+
+// limit movement
+const finalY = Math.max(0, Math.min(60, yOffset));
+
+card.style.transform = `scale(${scale}) translateY(${finalY}px)`;
+  });
+});
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();

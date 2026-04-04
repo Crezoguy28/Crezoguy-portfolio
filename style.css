@@ -2,14 +2,16 @@
    BASE & RESET
 ═══════════════════════════════ */
 @font-face {
-  font-family: 'Basement';
-  src: url('./fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Basement';
+    src: url('./fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -123,9 +125,11 @@ nav li:hover {
 .hamburger.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
+
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
 }
@@ -176,7 +180,7 @@ nav li:hover {
 h1 {
     font-family: 'Basement', sans-serif;
     font-size: 164px;
-    font-weight: 700;
+    font-weight: 500 !important;
     margin: 0;
     color: transparent;
     line-height: 1;
@@ -186,6 +190,7 @@ h1 {
     background: linear-gradient(180.41deg, #FFFFFF -40.42%, rgba(32, 34, 39, 0) 128.9%);
     -webkit-background-clip: text;
     background-clip: text;
+    font-weight: 500 !important;
 }
 
 .hero-hello {
@@ -246,7 +251,7 @@ h2 {
 }
 
 .top .jojo-img {
-    z-index: 0;
+    z-index: 1;
     position: absolute;
 }
 
@@ -294,8 +299,10 @@ h2 {
    CASE STUDIES
 ═══════════════════════════════ */
 .case-study-section {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+        position: relative;
+    padding-bottom: 300px; /* scroll space */
 }
 
 .case-heading {
@@ -331,9 +338,14 @@ h2 {
     position: sticky;
     top: 20%;
     z-index: 0;
+    transform-origin: top center;
+    transition: transform 0.1s linear;
+
 }
 
-
+.case-study {
+    transform-origin: center top;
+}   
 .case-img {
     flex-shrink: 0;
 }
@@ -687,7 +699,8 @@ body.cinematic-mode .letterbox-bottom {
         gap: 24px;
         padding: 24px 20px;
         border-radius: 24px;
-        position: static; /* disable sticky stacking on mobile */
+        position: static;
+        /* disable sticky stacking on mobile */
         margin-bottom: 24px;
     }
 
