@@ -342,8 +342,10 @@ h2 {
     transition: transform 0.1s linear;
 
 }
-.case-study-4{
+.case-study-3{
     z-index: 5;
+    transform-origin: unset;
+    transition: transform 0.1s linear;
 }
 
 .case-study {
