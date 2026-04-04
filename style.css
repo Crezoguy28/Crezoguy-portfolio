@@ -469,11 +469,10 @@ p {
     gap: 8px;
     padding: 16px 0;
     opacity: 0;
-    transition: opacity 0.4s;
 }
 
 .frame-dots.visible {
-    opacity: 1;
+    opacity: 0;
 }
 
 .fdot {
