@@ -152,16 +152,9 @@ nav li:hover {
     display: flex;
     flex-direction: column;
     height: 70vh;
-    min-height: 400px;
     justify-content: center;
-    padding-top: 60px;
     position: relative;
-}
-
-.text-container {
-    display: flex;
-    align-items: center;
-    position: relative;
+    margin: 80px 0 0 0;
 }
 
 #text {
@@ -169,7 +162,7 @@ nav li:hover {
     align-items: flex-end;
     width: 100%;
     justify-content: space-between;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 #left {
@@ -179,18 +172,17 @@ nav li:hover {
 
 h1 {
     font-family: 'Basement', sans-serif;
-    font-size: 164px;
-    font-weight: 500 !important;
+    font-size: 150px;
+    font-weight: 500;
     margin: 0;
     color: transparent;
-    line-height: 1;
 }
 
 .gradient-text {
     background: linear-gradient(180.41deg, #FFFFFF -40.42%, rgba(32, 34, 39, 0) 128.9%);
     -webkit-background-clip: text;
     background-clip: text;
-    font-weight: 500 !important;
+    font-weight: 500;
 }
 
 .hero-hello {
@@ -201,6 +193,75 @@ h1 {
     font-weight: 700;
 }
 
+.back {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 560px;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+
+.front {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 560px;
+}
+
+
+
+h2 {
+    font-family: 'basement', sans-serif;
+    font-size: 150px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.fill {
+    color: #FF6A3A;
+    text-align: center;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+}
+
+.top .jojo-img {
+    z-index: 1;
+    position: absolute;
+}
+
+.stroke {
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 2px #FF6A3A;
+    opacity: 0.2;
+    z-index: 9;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.back-layer {
+    position: absolute;
+    z-index: -1;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+}
+
+.name {
+    transform: none !important;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+}
 .radial-blur {
     position: absolute;
     top: 50%;
@@ -212,58 +273,6 @@ h1 {
     filter: blur(120px);
     z-index: -10;
     pointer-events: none;
-}
-
-.top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    z-index: 3;
-    pointer-events: none;
-}
-
-h2 {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 150px;
-    margin: 0;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.stroke {
-    position: absolute;
-    color: transparent;
-    -webkit-text-stroke: 2px #FF6A3A;
-    opacity: 0.2;
-    z-index: 5;
-}
-
-.fill {
-    z-index: 0;
-    color: #FF6A3A;
-}
-
-.top .jojo-img {
-    z-index: 1;
-    position: absolute;
-}
-
-.top .logo-img {
-    opacity: 0.3;
-    z-index: 0;
-}
-
-.name {
-    position: absolute;
-    display: flex;
-    padding-top: 580px;
 }
 
 /* ═══════════════════════════════
@@ -286,13 +295,28 @@ h2 {
 ═══════════════════════════════ */
 .about {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 80px;
 }
+.abt-container
+{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
 
 .about-img {
     flex-shrink: 0;
+}
+.abtpara {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #808080;
+    margin: 0;
+    line-height: 1.6;
 }
 
 /* ═══════════════════════════════
