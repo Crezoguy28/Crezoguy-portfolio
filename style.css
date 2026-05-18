@@ -101,11 +101,11 @@ nav li:hover {
 
 /* Hamburger - hidden on desktop */
 .hamburger {
+    width: 36px;
+    height: 36px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 28px;
-    height: 20px;
     background: transparent;
     border: none;
     padding: 0;
@@ -262,6 +262,7 @@ h2 {
     right: 0;
     left: 0;
 }
+
 .radial-blur {
     position: absolute;
     top: 50%;
@@ -300,8 +301,8 @@ h2 {
     align-items: center;
     gap: 80px;
 }
-.abt-container
-{
+
+.abt-container {
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -311,6 +312,7 @@ h2 {
 .about-img {
     flex-shrink: 0;
 }
+
 .abtpara {
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
@@ -325,8 +327,9 @@ h2 {
 .case-study-section {
     /* display: flex;
     flex-direction: column; */
-        position: relative;
-    padding-bottom: 300px; /* scroll space */
+    position: relative;
+    padding-bottom: 300px;
+    /* scroll space */
 }
 
 .case-heading {
@@ -366,7 +369,8 @@ h2 {
     transition: transform 0.1s linear;
 
 }
-.case-study-3{
+
+.case-study-3 {
     z-index: 5;
     transform-origin: unset;
     transition: transform 0.1s linear;
@@ -374,7 +378,8 @@ h2 {
 
 .case-study {
     transform-origin: center top;
-}   
+}
+
 .case-img {
     flex-shrink: 0;
 }
@@ -495,35 +500,76 @@ p {
     opacity: 0;
 }
 
-.frame-dots.visible {
-    opacity: 0;
-}
 
-.fdot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-}
 
-.fdot.on {
-    background: #FF6A3A;
-    transform: scale(1.3);
-}
+
 
 body.cinematic-mode .letterbox-top,
 body.cinematic-mode .letterbox-bottom {
     height: 40px;
 }
 
+
 /* ═══════════════════════════════
-   RESPONSIVE — TABLET (≤1024px)
+   RESPONSIVE — TABLET (<1800px)
 ═══════════════════════════════ */
-@media (max-width: 1024px) {
+@media (max-width: 1800px) {
     .container {
-        padding: 0 40px;
+        padding: 0 60px;
+    }
+
+    h1 {
+        font-size: 120px;
+    }
+
+    h2 {
+        font-size: 100px;
+    }
+
+    .front {
+        width: 520px;
+        height: 520px;
+    }
+
+    .back {
+        width: 500px;
+    }
+
+    .name {
+        bottom: -140px;
+    }
+
+    .back-layer {
+        bottom: -140px;
+    }
+
+
+    .radial-blur {
+        width: 420px;
+        height: 420px;
+    }
+
+    .hero-section {
+        margin: 40px 0 0 0;
+        height: 65vh;
+
+    }
+
+    .back {
+        max-width: 420px;
+    }
+
+    #text {
+        padding-bottom: 30px;
+    }
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE — TABLET (<1440px)
+═══════════════════════════════ */
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 60px;
     }
 
     h1 {
@@ -531,282 +577,294 @@ body.cinematic-mode .letterbox-bottom {
     }
 
     h2 {
-        font-size: 90px;
+        font-size: 100px;
     }
 
-    .top {
+    .front {
+        width: 450px;
+        height: 450px;
+    }
+
+    .back {
         width: 400px;
-        height: 400px;
     }
 
     .name {
-        padding-top: 380px;
+        bottom: -90px;
     }
 
-    .about-text {
-        font-size: 60px;
+    .back-layer {
+        bottom: -90px;
     }
 
-    .case-heading {
-        font-size: 80px;
+
+    .radial-blur {
+        width: 420px;
+        height: 420px;
     }
 
-    h3 {
-        font-size: 48px;
+    .hero-section {
+        margin: 40px 0 0 0;
+        height: 60vh;
+
     }
 
-    h5 {
-        font-size: 36px;
+    .back {
+        max-width: 420px;
     }
 
-    .hero-hello {
-        font-size: 36px;
-    }
-
-    .main-container {
-        gap: 120px;
-    }
-
-    .about {
-        gap: 40px;
-    }
-
-    .case-study-1,
-    .case-study-2,
-    .case-study-3,
-    .case-study-4 {
-        gap: 30px;
-        padding: 30px;
-    }
-
-    .content {
-        gap: 24px;
+    #text {
+        padding-bottom: 30px;
     }
 }
 
 /* ═══════════════════════════════
-   RESPONSIVE — MOBILE (≤768px)
+   RESPONSIVE — TABLET (<1200px)
 ═══════════════════════════════ */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .container {
-        padding: 0 20px;
+        padding: 0 40px;
     }
 
-    /* NAV */
-    nav {
-        flex-wrap: wrap;
-        padding: 16px 0;
+    h1 {
+        font-size: 90px;
+    }
+
+    h2 {
+        font-size: 90px;
+    }
+
+    .front {
+        width: 450px;
+        height: 450px;
+    }
+
+    .back {
+        width: 400px;
+    }
+
+    .name {
+        bottom: -90px;
+    }
+
+    .back-layer {
+        bottom: -90px;
+    }
+
+
+    .radial-blur {
+        width: 420px;
+        height: 420px;
+    }
+
+    .hero-section {
+        margin: 40px 0 0 0;
+        height: 60vh;
+
+    }
+
+    .back {
+        max-width: 420px;
+    }
+
+    #text {
+        padding-bottom: 30px;
+    }
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE — TABLET (<1000px / MOBILE portrait)
+═══════════════════════════════ */
+@media (max-width: 1000px) {
+    .container {
+        padding: 0 40px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 140px;
+        width: 100%;
+    }
+
+    #text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #text h5 {
+        font-size: 32px;
+    }
+
+    #nav-links {
+        display: none;
     }
 
     .hamburger {
         display: flex;
     }
 
-    #nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        width: 100%;
-        background: #222;
-        border-radius: 16px;
-        margin-top: 12px;
-        overflow: hidden;
-        order: 3;
+    h1 {
+        font-size: 90px;
     }
 
-    #nav-links.open {
+    h2 {
+        font-size: 90px;
+    }
+
+    .front {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 200px;
+        width: 470px;
+        height: 470px;
+    }
+
+    .back {
+        position: relative;
+        width: 400px;
+        bottom: 10px;
+    }
+
+    .name {
+        bottom: -100px;
+        z-index: 99;
+    }
+
+    .back-layer {
+        bottom: -100px;
+    }
+
+
+    .radial-blur {
+        top: 500px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .back {
+        max-width: 420px;
+    }
+
+    #text {
+        padding-bottom: 30px;
+    }
+
+    .right-btns {
         display: flex;
+        align-items: center;
+        gap: 16px;
     }
 
-    nav li {
-        font-size: 18px;
-        padding: 14px 20px;
-        border-bottom: 1px solid #333;
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE — TABLET (<1000px / MOBILE portrait)
+═══════════════════════════════ */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    nav li:last-child {
-        border-bottom: none;
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hire-btn {
-        font-size: 16px;
-        padding: 8px 20px;
+        display: none;
     }
 
-    /* HERO */
+    .hamburger {
+        display: flex;
+    }
+
     .hero-section {
-        height: auto;
-        min-height: 80vw;
-        padding-top: 40px;
-    }
-
-    .text-container {
-        flex-direction: column;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        width: 100%;
     }
 
     #text {
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 0;
-        gap: 0;
-        position: relative;
-        z-index: 4;
     }
+
+    #text h5 {
+        font-size: 24px;
+    }
+
+    #nav-links {
+        display: none;
+    }
+
 
     h1 {
-        font-size: clamp(48px, 15vw, 100px);
-    }
-
-    .hero-hello {
-        font-size: clamp(18px, 5vw, 36px);
-    }
-
-    .top {
-        width: clamp(200px, 70vw, 350px);
-        height: clamp(200px, 70vw, 350px);
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        margin: 20px auto;
+        font-size: 48px;
     }
 
     h2 {
-        font-size: clamp(40px, 12vw, 80px);
+        font-size: 48px;
+    }
+
+    .front {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 100px;
+        width:320px;
+        height: 320px;
+    }
+
+    .back {
+        position: relative;
+        width: 250px;
+        bottom: 10px;
     }
 
     .name {
-        padding-top: clamp(180px, 55vw, 320px);
+        bottom: -50px;
+        z-index: 99;
     }
+
+    .back-layer {
+        bottom: -50px;
+    }
+
 
     .radial-blur {
-        width: 300px;
-        height: 300px;
+        top: 350px;
+        width: 350px;
+        height: 350px;
     }
 
-    /* ABOUT TEXT */
-    .about-text {
-        font-size: clamp(32px, 8vw, 60px);
-        padding-top: 40px;
-        line-height: 1.15;
+    .back {
+        max-width: 420px;
     }
 
-    /* ABOUT SECTION */
-    .about {
-        flex-direction: column;
-        gap: 32px;
-        align-items: flex-start;
+    #text {
+        padding-bottom: 30px;
     }
 
-    .about-img {
-        width: 100%;
-        text-align: center;
-    }
-
-    h5 {
-        font-size: clamp(22px, 6vw, 36px);
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    /* CASE STUDIES */
-    .case-heading {
-        font-size: clamp(40px, 12vw, 80px);
-        position: static;
-        margin-bottom: 32px;
-    }
-
-    .case-study-1,
-    .case-study-2,
-    .case-study-3,
-    .case-study-4 {
-        flex-direction: column;
-        gap: 24px;
-        padding: 24px 20px;
-        border-radius: 24px;
-        position: static;
-        /* disable sticky stacking on mobile */
-        margin-bottom: 24px;
-    }
-
-    .case-img {
-        width: 100%;
-    }
-
-    .case-btn {
-        width: 100%;
-        font-size: 16px;
-        padding: 12px 20px;
-    }
-
-    .content {
+    .right-btns {
+        display: flex;
+        align-items: center;
         gap: 16px;
     }
 
-    h3 {
-        font-size: clamp(28px, 8vw, 48px);
-    }
-
-    /* CINEMATIC */
-    .frame-canvas {
-        width: 90%;
-    }
-
-    .main-container {
-        gap: 80px;
-    }
-
-    body.cinematic-mode .letterbox-top,
-    body.cinematic-mode .letterbox-bottom {
-        height: 20px;
-    }
-}
-
-/* ═══════════════════════════════
-   RESPONSIVE — SMALL MOBILE (≤480px)
-═══════════════════════════════ */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-   ,hire-btn{
-      display: none;
-   }
-
-    h1 {
-        font-size: clamp(36px, 13vw, 60px);
-    }
-
-    h2 {
-        font-size: clamp(30px, 10vw, 56px);
-    }
-
-    .name {
-        padding-top: clamp(150px, 50vw, 220px);
-    }
-
-    .top {
-        width: clamp(160px, 60vw, 240px);
-        height: clamp(160px, 60vw, 240px);
-    }
-
-    .about-text {
-        font-size: clamp(26px, 7.5vw, 44px);
-    }
-
-    .case-heading {
-        font-size: clamp(32px, 11vw, 56px);
-    }
-
-    nav li {
-        font-size: 16px;
-    }
-
-    .hire-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
 }
